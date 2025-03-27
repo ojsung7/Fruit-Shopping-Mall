@@ -1,0 +1,101 @@
+erDiagram
+    MEMBER {
+        int member_id PK
+        string username
+        string email
+        string password
+        string name
+        string phone_number
+        date birth_date
+        string address
+        date join_date
+        string member_grade
+    }
+
+    FRUIT {
+        int fruit_id PK
+        string fruit_name
+        string origin
+        int stock_quantity
+        decimal price
+        string category
+        string season
+        string description
+        string image_url
+    }
+
+    ORDER {
+        int order_id PK
+        int member_id FK
+        date order_date
+        decimal total_price
+        string payment_method
+        string order_status
+    }
+
+    ORDER_DETAIL {
+        int order_detail_id PK
+        int order_id FK
+        int fruit_id FK
+        int quantity
+        decimal unit_price
+    }
+
+    DELIVERY {
+        int delivery_id PK
+        int order_id FK
+        string delivery_status
+        date expected_delivery_date
+        date actual_delivery_date
+        string courier
+        string tracking_number
+    }
+
+    REVIEW {
+        int review_id PK
+        int order_detail_id FK
+        int member_id FK
+        int rating
+        string content
+        date review_date
+        string image_url
+    }
+
+    CART {
+        int cart_id PK
+        int member_id FK
+        int fruit_id FK
+        int quantity
+        date added_date
+    }
+
+    WISHLIST {
+        int wishlist_id PK
+        int member_id FK
+        int fruit_id FK
+        date added_date
+    }
+
+    PAYMENT {
+        int payment_id PK
+        int order_id FK
+        decimal amount
+        string payment_type
+        date payment_date
+        string payment_status
+    }
+
+    MEMBER ||--o{ ORDER : places
+    MEMBER ||--o{ REVIEW : writes
+    MEMBER ||--o{ CART : has
+    MEMBER ||--o{ WISHLIST : maintains
+
+    FRUIT ||--o{ ORDER_DETAIL : includes
+    FRUIT ||--o{ CART : added_to
+    FRUIT ||--o{ WISHLIST : wished
+
+    ORDER ||--|| ORDER_DETAIL : contains
+    ORDER ||--o{ DELIVERY : has
+    ORDER ||--|| PAYMENT : processes
+
+    ORDER_DETAIL ||--o{ REVIEW : gets
