@@ -26,3 +26,7 @@
     - spring boot 3.4.4
 2. 설계 방식
     - DDD - Domain Driven Design
+3. 작업 일지
+    - 2025.03.31
+        - security, swagger, jwt 구현
+        - member 구현 -> 회원가입 및 DB 저장 테스트 완료
