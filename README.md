@@ -18,3 +18,11 @@
         - ```docker exec -it mariadb-container mariadb -u root -p```
 3. Table 생성
     - /DATA/table.sql에 있는 쿼리문으로 테이블 생성
+---
+## BE
+
+1. 환경
+    - java 17
+    - spring boot 3.4.4
+2. 설계 방식
+    - DDD - Domain Driven Design

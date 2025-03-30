@@ -1,0 +1,524 @@
+2025-03-31 00:00:18.405 DEBUG [] --- [http-nio-8080-exec-5] c.f.g.s.jwt.JwtAuthenticationFilter      : 유효한 JWT 토큰이 없습니다
+2025-03-31 00:00:19.231 DEBUG [] --- [http-nio-8080-exec-6] c.f.g.s.jwt.JwtAuthenticationFilter      : 유효한 JWT 토큰이 없습니다
+2025-03-31 00:02:48.774  INFO [] --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-31 00:02:48.778  INFO [] --- [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 00:02:48.782  INFO [] --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-31 00:02:48.787  INFO [] --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 00:02:48.789  INFO [] --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-31 00:02:48.797  INFO [] --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-31 00:02:48.870 ERROR [] --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.yaml.snakeyaml.scanner.ScannerException: while scanning for the next token
+found character '\t(TAB)' that cannot start any token. (Do not use \t(TAB) for indentation)
+ in 'reader', line 49, column 1:
+    		org.springframework.security: 
+    ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:445)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:238)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:637)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:161)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:57)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:43)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:136)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:116)
+	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:249)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:214)
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:396)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:361)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:329)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:218)
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:396)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:361)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:329)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:218)
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:396)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:361)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:329)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:218)
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:141)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:162)
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.getData(OriginTrackedYamlLoader.java:99)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:529)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169)
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84)
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36)
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96)
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132)
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:121)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:132)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:115)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:353)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.fruitmall.FruitShoppingMallApplication.main(FruitShoppingMallApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+
+2025-03-31 00:02:55.513  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Starting FruitShoppingMallApplication using Java 21.0.5 with PID 4348 (C:\Users\pc\Desktop\Fruit Shopping Mall\BE\fruit-shopping-mall\target\classes started by pc in C:\Users\pc\Desktop\Fruit Shopping Mall\BE\fruit-shopping-mall)
+2025-03-31 00:02:55.514 DEBUG [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-03-31 00:02:55.514  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : The following 1 profile is active: "dev"
+2025-03-31 00:02:55.900  INFO [] --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-31 00:02:55.932  INFO [] --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interface.
+2025-03-31 00:02:56.107  INFO [] --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-31 00:02:56.109  INFO [] --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-31 00:02:56.109  INFO [] --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-31 00:02:56.145  INFO [] --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-03-31 00:02:56.145  INFO [] --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 629 ms
+2025-03-31 00:02:56.278  INFO [] --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-31 00:02:56.282  INFO [] --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-31 00:02:56.291  INFO [] --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-31 00:02:56.292  INFO [] --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-03-31 00:02:56.302  INFO [] --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.mariadb.jdbc.Connection@6f92e9b7
+2025-03-31 00:02:56.303  INFO [] --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-03-31 00:02:56.305  WARN [] --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-31 00:02:56.306  INFO [] --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 11.7.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-31 00:02:56.356  INFO [] --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-31 00:02:56.365  INFO [] --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 00:02:56.658  INFO [] --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-03-31 00:02:56.711  INFO [] --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-03-31 00:02:57.184  INFO [] --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost/mydb?user=myuser&password=***'
+2025-03-31 00:02:57.218  INFO [] --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-31 00:02:57.238  INFO [] --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-03-31 00:02:57.242  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Started FruitShoppingMallApplication in 1.772 seconds (process running for 308.852)
+2025-03-31 00:02:57.244  INFO [] --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-31 00:03:48.105  INFO [] --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-31 00:03:48.106  INFO [] --- [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 00:03:48.109  INFO [] --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-31 00:03:48.112  INFO [] --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 00:03:48.113  INFO [] --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-03-31 00:03:48.120  INFO [] --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-03-31 00:03:48.174 ERROR [] --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.yaml.snakeyaml.scanner.ScannerException: while scanning for the next token
+found character '\t(TAB)' that cannot start any token. (Do not use \t(TAB) for indentation)
+ in 'reader', line 49, column 1:
+    		org.springframework.security: 
+    ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:445)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:238)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:637)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:161)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:57)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:43)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:136)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:116)
+	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:249)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:214)
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:396)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:361)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:329)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:218)
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:396)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:361)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:329)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:218)
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:396)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:361)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:329)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:218)
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:141)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:162)
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.getData(OriginTrackedYamlLoader.java:99)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:529)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169)
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84)
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36)
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96)
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132)
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:121)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:132)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:115)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:353)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.fruitmall.FruitShoppingMallApplication.main(FruitShoppingMallApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+
+2025-03-31 00:04:12.295  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Starting FruitShoppingMallApplication using Java 21.0.5 with PID 4348 (C:\Users\pc\Desktop\Fruit Shopping Mall\BE\fruit-shopping-mall\target\classes started by pc in C:\Users\pc\Desktop\Fruit Shopping Mall\BE\fruit-shopping-mall)
+2025-03-31 00:04:12.296 DEBUG [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-03-31 00:04:12.296  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : The following 1 profile is active: "dev"
+2025-03-31 00:04:12.650  INFO [] --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-31 00:04:12.678  INFO [] --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interface.
+2025-03-31 00:04:12.815  INFO [] --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-31 00:04:12.815  INFO [] --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-31 00:04:12.816  INFO [] --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-31 00:04:12.849  INFO [] --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-03-31 00:04:12.849  INFO [] --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 551 ms
+2025-03-31 00:04:12.979  INFO [] --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-31 00:04:12.983  INFO [] --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-31 00:04:12.991  INFO [] --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-31 00:04:12.992  INFO [] --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-03-31 00:04:12.999  INFO [] --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.mariadb.jdbc.Connection@4235018b
+2025-03-31 00:04:13.000  INFO [] --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-03-31 00:04:13.001  WARN [] --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-31 00:04:13.002  INFO [] --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 11.7.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-31 00:04:13.046  INFO [] --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-31 00:04:13.053  INFO [] --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 00:04:13.324  INFO [] --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-03-31 00:04:13.376  INFO [] --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-03-31 00:04:13.859  INFO [] --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost/mydb?user=myuser&password=***'
+2025-03-31 00:04:13.890  INFO [] --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-31 00:04:13.909  INFO [] --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-03-31 00:04:13.914  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Started FruitShoppingMallApplication in 1.655 seconds (process running for 385.524)
+2025-03-31 00:04:13.915  INFO [] --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-31 00:04:35.179  INFO [] --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-31 00:04:35.179  INFO [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-31 00:04:35.181  INFO [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-31 00:04:35.183 DEBUG [] --- [http-nio-8080-exec-2] c.f.g.s.jwt.JwtAuthenticationFilter      : 유효한 JWT 토큰이 없습니다
+2025-03-31 00:05:25.379  INFO [] --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-31 00:05:25.380  INFO [] --- [Thread-13] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 00:05:25.384  INFO [] --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-31 00:05:25.386  INFO [] --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 00:05:25.387  INFO [] --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-03-31 00:05:25.394  INFO [] --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-03-31 00:05:25.479  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Starting FruitShoppingMallApplication using Java 21.0.5 with PID 4348 (C:\Users\pc\Desktop\Fruit Shopping Mall\BE\fruit-shopping-mall\target\classes started by pc in C:\Users\pc\Desktop\Fruit Shopping Mall\BE\fruit-shopping-mall)
+2025-03-31 00:05:25.480 DEBUG [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-03-31 00:05:25.480  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : The following 1 profile is active: "dev"
+2025-03-31 00:05:25.845  INFO [] --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-31 00:05:25.873  INFO [] --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interface.
+2025-03-31 00:05:26.038  INFO [] --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-31 00:05:26.040  INFO [] --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-31 00:05:26.040  INFO [] --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-31 00:05:26.076  INFO [] --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-03-31 00:05:26.076  INFO [] --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 594 ms
+2025-03-31 00:05:26.163 DEBUG [] --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-03-31 00:05:26.218  INFO [] --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-31 00:05:26.222  INFO [] --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-31 00:05:26.230  INFO [] --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-31 00:05:26.232  INFO [] --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-03-31 00:05:26.240  INFO [] --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.mariadb.jdbc.Connection@fa6db1
+2025-03-31 00:05:26.241  INFO [] --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-03-31 00:05:26.242  WARN [] --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-31 00:05:26.243  INFO [] --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 11.7.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-31 00:05:26.290  INFO [] --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-31 00:05:26.298  INFO [] --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 00:05:26.594  INFO [] --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-03-31 00:05:26.652  INFO [] --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-03-31 00:05:26.698 DEBUG [] --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+2025-03-31 00:05:26.795 DEBUG [] --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-03-31 00:05:26.856 DEBUG [] --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-31 00:05:26.952 DEBUG [] --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-31 00:05:26.976 DEBUG [] --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-31 00:05:27.166  INFO [] --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost/mydb?user=myuser&password=***'
+2025-03-31 00:05:27.202  INFO [] --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-31 00:05:27.229  INFO [] --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-03-31 00:05:27.234  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Started FruitShoppingMallApplication in 1.8 seconds (process running for 458.843)
+2025-03-31 00:05:27.235  INFO [] --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-31 00:05:29.991  INFO [] --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-31 00:05:29.992  INFO [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-31 00:05:29.992 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-03-31 00:05:29.992 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-03-31 00:05:29.992 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-03-31 00:05:29.993 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@441e64f1
+2025-03-31 00:05:29.993 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7d9c88c9
+2025-03-31 00:05:29.994 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-31 00:05:29.994  INFO [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-31 00:05:29.995 DEBUG [] --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-03-31 00:05:29.996 DEBUG [] --- [http-nio-8080-exec-2] c.f.g.s.jwt.JwtAuthenticationFilter      : 유효한 JWT 토큰이 없습니다
+2025-03-31 00:05:29.996 DEBUG [] --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-31 00:05:29.999 DEBUG [] --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-03-31 00:05:29.999 DEBUG [] --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-03-31 00:05:30.000 DEBUG [] --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-31 00:05:30.000 DEBUG [] --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-03-31 00:09:48.370  INFO [] --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-31 00:09:48.371  INFO [] --- [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 00:09:48.375  INFO [] --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-31 00:09:48.377  INFO [] --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 00:09:48.378  INFO [] --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-03-31 00:09:48.385  INFO [] --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-03-31 00:09:48.466  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Starting FruitShoppingMallApplication using Java 21.0.5 with PID 4348 (C:\Users\pc\Desktop\Fruit Shopping Mall\BE\fruit-shopping-mall\target\classes started by pc in C:\Users\pc\Desktop\Fruit Shopping Mall\BE\fruit-shopping-mall)
+2025-03-31 00:09:48.467 DEBUG [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-03-31 00:09:48.467  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : The following 1 profile is active: "dev"
+2025-03-31 00:09:48.838  INFO [] --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-31 00:09:48.867  INFO [] --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interface.
+2025-03-31 00:09:49.036  INFO [] --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-31 00:09:49.038  INFO [] --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-31 00:09:49.038  INFO [] --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-31 00:09:49.075  INFO [] --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-03-31 00:09:49.075  INFO [] --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 606 ms
+2025-03-31 00:09:49.180 DEBUG [] --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-03-31 00:09:49.236  INFO [] --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-31 00:09:49.239  INFO [] --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-31 00:09:49.248  INFO [] --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-31 00:09:49.249  INFO [] --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-03-31 00:09:49.257  INFO [] --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.mariadb.jdbc.Connection@34bc4b68
+2025-03-31 00:09:49.258  INFO [] --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-03-31 00:09:49.259  WARN [] --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-31 00:09:49.260  INFO [] --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 11.7.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-31 00:09:49.304  INFO [] --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-31 00:09:49.313  INFO [] --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 00:09:49.602  INFO [] --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-03-31 00:09:49.655  INFO [] --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-03-31 00:09:49.708 DEBUG [] --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+2025-03-31 00:09:49.799 DEBUG [] --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-03-31 00:09:49.864 DEBUG [] --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-31 00:09:49.943 DEBUG [] --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-31 00:09:49.964 DEBUG [] --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-31 00:09:50.156  INFO [] --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost/mydb?user=myuser&password=***'
+2025-03-31 00:09:50.191  INFO [] --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-31 00:09:50.211  INFO [] --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-03-31 00:09:50.215  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Started FruitShoppingMallApplication in 1.792 seconds (process running for 721.825)
+2025-03-31 00:09:50.217  INFO [] --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-31 00:10:18.971  INFO [] --- [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-31 00:10:18.972  INFO [] --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-31 00:10:18.972 DEBUG [] --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-03-31 00:10:18.972 DEBUG [] --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-03-31 00:10:18.972 DEBUG [] --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-03-31 00:10:18.973 DEBUG [] --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@57fed084
+2025-03-31 00:10:18.974 DEBUG [] --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6c0a870a
+2025-03-31 00:10:18.974 DEBUG [] --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-31 00:10:18.974  INFO [] --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-31 00:10:18.975 DEBUG [] --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-03-31 00:10:18.975 DEBUG [] --- [http-nio-8080-exec-5] c.f.g.s.jwt.JwtAuthenticationFilter      : 유효한 JWT 토큰이 없습니다
+2025-03-31 00:10:18.976 DEBUG [] --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-31 00:10:18.978 DEBUG [] --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2025-03-31 00:10:18.981 DEBUG [] --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/register", parameters={}
+2025-03-31 00:10:18.982 DEBUG [] --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fruitmall.interfaces.web.auth.AuthController#register(MemberRegisterDto)
+2025-03-31 00:10:19.031 DEBUG [] --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.fruitmall.domain.member.application.dto.MemberRegisterDto@71d65a99]
+2025-03-31 00:10:19.185 DEBUG [] --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        m1_0.member_id 
+    from
+        member m1_0 
+    where
+        m1_0.username=? 
+    limit
+        ?
+2025-03-31 00:10:19.204 DEBUG [] --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        m1_0.member_id 
+    from
+        member m1_0 
+    where
+        m1_0.email=? 
+    limit
+        ?
+2025-03-31 00:10:19.300 DEBUG [] --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        member
+        (address, birth_date, created_at, email, join_date, member_grade, name, password, phone_number, updated_at, username) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-03-31 00:10:19.325 DEBUG [] --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        member_roles
+        (member_id, role) 
+    values
+        (?, ?)
+2025-03-31 00:10:19.343 DEBUG [] --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-03-31 00:10:19.344 DEBUG [] --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.fruitmall.domain.member.application.dto.MemberDto@4897fee5]
+2025-03-31 00:10:19.350 DEBUG [] --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-03-31 00:10:37.226  INFO [] --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-31 00:10:37.227  INFO [] --- [Thread-23] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 00:10:37.230  INFO [] --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-31 00:10:37.233  INFO [] --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 00:10:37.233  INFO [] --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-03-31 00:10:37.240  INFO [] --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-03-31 00:10:37.317  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Starting FruitShoppingMallApplication using Java 21.0.5 with PID 4348 (C:\Users\pc\Desktop\Fruit Shopping Mall\BE\fruit-shopping-mall\target\classes started by pc in C:\Users\pc\Desktop\Fruit Shopping Mall\BE\fruit-shopping-mall)
+2025-03-31 00:10:37.317 DEBUG [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-03-31 00:10:37.317  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : The following 1 profile is active: "dev"
+2025-03-31 00:10:37.703  INFO [] --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-31 00:10:37.733  INFO [] --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interface.
+2025-03-31 00:10:37.873  INFO [] --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-31 00:10:37.874  INFO [] --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-31 00:10:37.874  INFO [] --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-31 00:10:37.913  INFO [] --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-03-31 00:10:37.914  INFO [] --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 595 ms
+2025-03-31 00:10:37.995 DEBUG [] --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-03-31 00:10:38.044  INFO [] --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-31 00:10:38.048  INFO [] --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-31 00:10:38.059  INFO [] --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-31 00:10:38.060  INFO [] --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-03-31 00:10:38.068  INFO [] --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.mariadb.jdbc.Connection@761a55e
+2025-03-31 00:10:38.068  INFO [] --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-03-31 00:10:38.070  WARN [] --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-31 00:10:38.071  INFO [] --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 11.7.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-31 00:10:38.111  INFO [] --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-31 00:10:38.119  INFO [] --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 00:10:38.387  INFO [] --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-03-31 00:10:38.438  INFO [] --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-03-31 00:10:38.480 DEBUG [] --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+2025-03-31 00:10:38.567 DEBUG [] --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-03-31 00:10:38.628 DEBUG [] --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-31 00:10:38.704 DEBUG [] --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-31 00:10:38.725 DEBUG [] --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-31 00:10:38.895  INFO [] --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost/mydb?user=myuser&password=***'
+2025-03-31 00:10:38.926  INFO [] --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-31 00:10:38.944  INFO [] --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-03-31 00:10:38.949  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Started FruitShoppingMallApplication in 1.669 seconds (process running for 770.559)
+2025-03-31 00:10:38.950  INFO [] --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-31 00:10:40.159  INFO [] --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-31 00:10:40.159  INFO [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-31 00:10:40.159 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-03-31 00:10:40.159 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-03-31 00:10:40.159 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-03-31 00:10:40.160 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6254a3f7
+2025-03-31 00:10:40.161 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@59d02e34
+2025-03-31 00:10:40.161 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-31 00:10:40.161  INFO [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-31 00:10:40.162 DEBUG [] --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-03-31 00:10:40.162 DEBUG [] --- [http-nio-8080-exec-2] c.f.g.s.jwt.JwtAuthenticationFilter      : 유효한 JWT 토큰이 없습니다
+2025-03-31 00:10:40.163 DEBUG [] --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-31 00:10:40.165 DEBUG [] --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-03-31 00:10:40.166 DEBUG [] --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-03-31 00:10:40.167 DEBUG [] --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-31 00:10:40.167 DEBUG [] --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-03-31 00:10:47.582  INFO [] --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-31 00:10:47.583  INFO [] --- [Thread-27] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 00:10:47.587  INFO [] --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-31 00:10:47.589  INFO [] --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 00:10:47.589  INFO [] --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2025-03-31 00:10:47.597  INFO [] --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-03-31 00:10:47.674  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Starting FruitShoppingMallApplication using Java 21.0.5 with PID 4348 (C:\Users\pc\Desktop\Fruit Shopping Mall\BE\fruit-shopping-mall\target\classes started by pc in C:\Users\pc\Desktop\Fruit Shopping Mall\BE\fruit-shopping-mall)
+2025-03-31 00:10:47.675 DEBUG [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-03-31 00:10:47.675  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : The following 1 profile is active: "dev"
+2025-03-31 00:10:48.045  INFO [] --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-31 00:10:48.074  INFO [] --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interface.
+2025-03-31 00:10:48.219  INFO [] --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-31 00:10:48.220  INFO [] --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-31 00:10:48.220  INFO [] --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-31 00:10:48.259  INFO [] --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-03-31 00:10:48.259  INFO [] --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 582 ms
+2025-03-31 00:10:48.344 DEBUG [] --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-03-31 00:10:48.395  INFO [] --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-31 00:10:48.398  INFO [] --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-31 00:10:48.407  INFO [] --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-31 00:10:48.408  INFO [] --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2025-03-31 00:10:48.414  INFO [] --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.mariadb.jdbc.Connection@15e5282e
+2025-03-31 00:10:48.414  INFO [] --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2025-03-31 00:10:48.416  WARN [] --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-31 00:10:48.416  INFO [] --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 11.7.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-31 00:10:48.456  INFO [] --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-31 00:10:48.464  INFO [] --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 00:10:48.735  INFO [] --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-03-31 00:10:48.786  INFO [] --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-03-31 00:10:48.832 DEBUG [] --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+2025-03-31 00:10:48.921 DEBUG [] --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-03-31 00:10:48.989 DEBUG [] --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-31 00:10:49.062 DEBUG [] --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-31 00:10:49.084 DEBUG [] --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-31 00:10:49.268  INFO [] --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost/mydb?user=myuser&password=***'
+2025-03-31 00:10:49.305  INFO [] --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-31 00:10:49.330  INFO [] --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-03-31 00:10:49.335  INFO [] --- [restartedMain] c.f.FruitShoppingMallApplication         : Started FruitShoppingMallApplication in 1.697 seconds (process running for 780.944)
+2025-03-31 00:10:49.338  INFO [] --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-31 00:10:50.596  INFO [] --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-31 00:10:50.596  INFO [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-31 00:10:50.597 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-03-31 00:10:50.597 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-03-31 00:10:50.597 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-03-31 00:10:50.598 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@73c124cf
+2025-03-31 00:10:50.598 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@69619ac4
+2025-03-31 00:10:50.598 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-31 00:10:50.598  INFO [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-31 00:10:50.599 DEBUG [] --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-03-31 00:10:50.599 DEBUG [] --- [http-nio-8080-exec-2] c.f.g.s.jwt.JwtAuthenticationFilter      : 유효한 JWT 토큰이 없습니다
+2025-03-31 00:10:50.600 DEBUG [] --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-31 00:10:50.600 DEBUG [] --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2025-03-31 00:10:50.600 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/register", parameters={}
+2025-03-31 00:10:50.601 DEBUG [] --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fruitmall.interfaces.web.auth.AuthController#register(MemberRegisterDto)
+2025-03-31 00:10:50.605 DEBUG [] --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.fruitmall.domain.member.application.dto.MemberRegisterDto@43a44ad]
+2025-03-31 00:10:50.622 DEBUG [] --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        m1_0.member_id 
+    from
+        member m1_0 
+    where
+        m1_0.username=? 
+    limit
+        ?
+2025-03-31 00:10:50.630 DEBUG [] --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.fruitmall.global.error.GlobalExceptionHandler#handleBusinessException(BusinessException)
+2025-03-31 00:10:50.631 ERROR [] --- [http-nio-8080-exec-2] c.f.global.error.GlobalExceptionHandler  : 비즈니스 예외 발생: 이미 사용 중인 사용자 이름입니다
+2025-03-31 00:10:50.634 DEBUG [] --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-03-31 00:10:50.634 DEBUG [] --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.fruitmall.global.error.ErrorResponse@12332f1a]
+2025-03-31 00:10:50.635  WARN [] --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.fruitmall.global.error.BusinessException: 이미 사용 중인 사용자 이름입니다]
+2025-03-31 00:10:50.636 DEBUG [] --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
