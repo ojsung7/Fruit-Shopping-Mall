@@ -41,17 +41,17 @@ public class SecurityConfig {
                     "/api/fruits/**",
                     "/api/categories/**").permitAll()
                 // 회원 관련 엔드포인트
-                .requestMatchers("/api/members/**").authenticated()
+                .requestMatchers("/members/**").authenticated()
                 // 주문 관련 엔드포인트
-                .requestMatchers("/api/orders/**").authenticated()
+                .requestMatchers("/orders/**").authenticated()
                 // 리뷰 관련 엔드포인트
-                .requestMatchers("/api/reviews/**").authenticated()
+                .requestMatchers("/reviews/**").authenticated()
                 // 장바구니 관련 엔드포인트
-                .requestMatchers("/api/cart/**").authenticated()
+                .requestMatchers("/cart/**").authenticated()
                 // 찜 목록 관련 엔드포인트
-                .requestMatchers("/api/wishlist/**").authenticated()
+                .requestMatchers("/wishlist/**").authenticated()
                 // 관리자 전용 엔드포인트
-                .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                .requestMatchers("/admin/**").hasRole("ADMIN")
                 // 그 외 모든 요청은 인증 필요
                 .anyRequest().authenticated()
             )

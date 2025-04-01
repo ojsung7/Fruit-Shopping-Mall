@@ -39,6 +39,16 @@ public class SecurityUtil {
     }
     
     /**
+     * 현재 인증된 사용자의 회원 ID를 가져옵니다.
+     * Username을 Long 타입으로 변환하여 반환합니다.
+     * 
+     * @return 현재 인증된 사용자의 회원 ID를 Optional로 반환
+     */
+    public static Optional<Long> getCurrentMemberId() {
+        return getCurrentUsername().map(Long::parseLong);
+    }
+    
+    /**
      * 현재 인증된 사용자가 인증되었는지 확인합니다.
      * 
      * @return 인증 여부

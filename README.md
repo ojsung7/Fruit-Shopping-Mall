@@ -30,3 +30,6 @@
     - 2025.03.31
         - security, swagger, jwt 구현
         - member 구현 -> 회원가입 및 DB 저장 테스트 완료
+    - 2025.04.01
+        - cart, delivery, fruit, order, review, wishlist 구현 완료
+        - 1차 BE 개발 완료

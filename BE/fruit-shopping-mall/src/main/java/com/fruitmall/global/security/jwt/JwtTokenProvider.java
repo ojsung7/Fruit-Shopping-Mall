@@ -30,7 +30,9 @@ public class JwtTokenProvider {
             @Value("${jwt.secret}") String secretKey,
             @Value("${jwt.expiration}") long tokenValidityInMilliseconds) {
         byte[] keyBytes = Base64.getDecoder().decode(secretKey);
-        this.key = Keys.hmacShaKeyFor(keyBytes);
+//        JWT 토큰 서명에 사용되는 비밀 키가 HS512 알고리즘에 필요한 최소 크기보다 작아서 오류 발생
+//        this.key = Keys.hmacShaKeyFor(keyBytes); 
+        this.key = Keys.secretKeyFor(SignatureAlgorithm.HS512);
         this.tokenValidityInMilliseconds = tokenValidityInMilliseconds;
     }
 
