@@ -30,16 +30,14 @@ public class SecurityConfig {
             .cors(AbstractHttpConfigurer::disable)
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
-                // Swagger/OpenAPI 엔드포인트
-                .requestMatchers("/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
+                // Swagger/OpenAPI 엔드포인트 - /api는 이미 context-path에 포함됨
+                .requestMatchers("/swagger-ui.html", "/swagger-ui/**", "/api-docs/**", "/v3/api-docs/**").permitAll()
                 // 액추에이터 엔드포인트
                 .requestMatchers("/actuator/**").permitAll()
                 // 인증 관련 엔드포인트
                 .requestMatchers("/auth/**").permitAll()
                 // 과일 상품 조회 (사용자 권한 불필요)
-                .requestMatchers(
-                    "/api/fruits/**",
-                    "/api/categories/**").permitAll()
+                .requestMatchers("/fruits/**", "/categories/**").permitAll()
                 // 회원 관련 엔드포인트
                 .requestMatchers("/members/**").authenticated()
                 // 주문 관련 엔드포인트
@@ -56,7 +54,6 @@ public class SecurityConfig {
                 .anyRequest().authenticated()
             )
             .addFilterBefore(new JwtAuthenticationFilter(tokenProvider), UsernamePasswordAuthenticationFilter.class);
-
         return http.build();
     }
 

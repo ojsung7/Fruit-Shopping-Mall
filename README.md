@@ -33,3 +33,12 @@
     - 2025.04.01
         - cart, delivery, fruit, order, review, wishlist 구현 완료
         - 1차 BE 개발 완료
+    - 2025.04.04
+        - swagger 의존성 문제 해결
+---
+## FE
+
+1. 환경
+    - node v22.14.0
+    - reaact(vite) + typescript
+    
