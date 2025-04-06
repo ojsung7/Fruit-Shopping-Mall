@@ -12,10 +12,10 @@ interface AuthState {
 
 const initialState: AuthState = {
     user: null,
-    token: getItem<string>('authToken', null),
+    token: getItem<string | null>('authToken', null),
     loading: false,
     error: null,
-    isAuthenticated: !!getItem<string>('authToken', null)
+    isAuthenticated: !!getItem<string | null>('authToken', null)
 };
 
 // 로그인 비동기 액션

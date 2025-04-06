@@ -27,8 +27,11 @@ export interface UserResponse {
     username: string;
     email: string;
     name: string;
+    phoneNumber: string;
+    address: string;
+    joinDate: string;  // 가입일 필드 추가
     roles: string[];
-}
+  }
 
 // 로그인
 export const login = async (credentials: LoginRequest): Promise<TokenResponse> => {
